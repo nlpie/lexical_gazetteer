@@ -247,9 +247,6 @@ def create_matcher(nlp, file_list):
                     #print('rule: {}'.format(rule))
                     matcher.add(col1, None, rule)
     
-    missed = ['vomit']
-    cdc_missed =['nausea vomiting']
-    
     return matcher
 
 def create_ruler(nlp, file_list):
