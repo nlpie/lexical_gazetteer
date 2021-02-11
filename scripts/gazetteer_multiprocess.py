@@ -90,10 +90,10 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, outp
         writer.writerow(new_cdc_symptoms)
         #count = 0
         for key, value in _dict_positive.items():
-            pat_id, note_id = key.split('_')
-            note_id = note_id.replace('.txt', '')
+            #pat_id, note_id = key.split('_')
+            #note_id = note_id.replace('.txt', '')
             
-            li_men = [pat_id, note_id]
+            li_men = [key]
             for key2, value2 in value.items():
                 #if count == 0:
                 #print('key: {} and key2: {}'.format(key, key2))
