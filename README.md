@@ -22,6 +22,7 @@ Rule-based matching [5] of COVID-19 gazetteer lexicon is automated using the fol
 ## Creating and Executing COVID-19 Gazetteer
 
 To create a docker image, simply run the following in the main directory:
+
 ```docker build -t ahc-nlpie-docker.artifactory.umn.edu/covid_gazetteer .```
 
 To run the created docker, type:
@@ -37,16 +38,16 @@ The important arguments to docker command are:
 
 References:
 
-1 https://spacy.io/api/matcher
+1 spaCy Matcher: https://spacy.io/api/matcher
 
-2 https://spacy.io/api/entityruler
+2 spaCy EntityRuler: https://spacy.io/api/entityruler
 
-3 https://spacy.io/usage/models
+3 spaCy models: https://spacy.io/usage/models
 
-4 https://spacy.io/universe/project/negspacy
+4 negspaCy: https://spacy.io/universe/project/negspacy
 
-5 https://spacy.io/usage/rule-based-matching
+5 spaCy Rule-Based Matching: https://spacy.io/usage/rule-based-matching
 
-6 https://spacy.io/api/token
+6 spaCy Token: https://spacy.io/api/token
 
-7 https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
+7 Symptoms of Coronavirus: https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
