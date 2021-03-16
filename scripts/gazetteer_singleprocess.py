@@ -15,6 +15,7 @@ import pandas as pd
 import re
 import time
 import multiprocessing as mp
+from datetime import datetime
 
 def clean_text(text):
     new_text = re.sub('[^A-Za-z0-9 /-]+', '', text.lower())
@@ -90,10 +91,10 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, outp
         writer.writerow(new_cdc_symptoms)
         #count = 0
         for key, value in _dict_positive.items():
-            #pat_id, note_id = key.split('_')
-            #note_id = note_id.replace('.txt', '')
+            pat_id, note_id = key.split('_')
+            note_id = note_id.replace('.txt', '')
             
-            li_men = [key]
+            li_men = [pat_id, note_id]
             for key2, value2 in value.items():
                 #if count == 0:
                 #print('key: {} and key2: {}'.format(key, key2))
@@ -381,6 +382,10 @@ def main():
     doc_folder = sys.argv[3]
     output_gaz = sys.argv[4]
  
+    now = datetime.now()
+    timestamp = str(datetime.timestamp(now))
+    output_ts = output_gaz + '_' + timestamp + '.csv'
+    
     gaz_csv_list = [gaz_csv]
     notes_list = read_list_of_notes(notes_csv)
     
@@ -388,7 +393,7 @@ def main():
     nlp_lemma = spacy.load('en_core_sci_sm')
     dict_gaz_cdc = load_gaz_cdc(nlp_lemma, gaz_csv)
     #print(dict_gaz_cdc) 
-    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_cdc, output_gaz)
+    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_cdc, output_ts)
     toc = time.perf_counter()
     print(f"Finished! Annotation done in {toc - tic:0.4f} seconds")
     
