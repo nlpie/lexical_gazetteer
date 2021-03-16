@@ -1,6 +1,6 @@
 # covid_symptoms_gazetteer
 
-covid_symptom_gazetteer (hereby referred as "COVID-19 gazetteer") is high throughput annotation system for real-time indexing of COVID-19 unstructred clinical notes. 
+covid_symptom_gazetteer (hereby referred as "COVID-19 gazetteer") is a high throughput annotation system for real-time indexing of COVID-19 unstructred clinical notes. 
 
 ## COVID-19 Gazetteer Architecture
 
@@ -38,16 +38,16 @@ The important arguments to docker command are:
 
 References:
 
-1 spaCy Matcher: https://spacy.io/api/matcher
+1. spaCy Matcher: https://spacy.io/api/matcher
 
-2 spaCy EntityRuler: https://spacy.io/api/entityruler
+2. spaCy EntityRuler: https://spacy.io/api/entityruler
 
-3 spaCy models: https://spacy.io/usage/models
+3. spaCy models: https://spacy.io/usage/models
 
-4 negspaCy: https://spacy.io/universe/project/negspacy
+4. negspaCy: https://spacy.io/universe/project/negspacy
 
-5 spaCy Rule-Based Matching: https://spacy.io/usage/rule-based-matching
+5. spaCy Rule-Based Matching: https://spacy.io/usage/rule-based-matching
 
-6 spaCy Token: https://spacy.io/api/token
+6. spaCy Token: https://spacy.io/api/token
 
-7 Symptoms of Coronavirus: https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
+7. Symptoms of Coronavirus: https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
