@@ -27,7 +27,7 @@ To create a docker image, simply run the following in the main directory:
 
 To run the created docker, type:
 
-```docker run -it -v mount_dir:/data ahc-nlpie-docker.artifactory.umn.edu/covid_gazetteer:latest python gazetteer_multiprocess.py GAZ_group.csv /data/notes_to_process.csv /data/data_in /data/ann_out```
+```docker run -it -v mount_dir:/data ahc-nlpie-docker.artifactory.umn.edu/covid_gazetteer:latest python gazetteer_multiprocess.py GAZ_group.csv /data/notes_to_process.csv /data/data_in /data/ann_out prefix_term```
 
 The important arguments to docker command are:
 
@@ -35,6 +35,7 @@ The important arguments to docker command are:
    - data_in: directory containing the notes.
    - mount_dir: directory containing notes_to_process.csv and data_in directory.
    - ann_out: annotated output.
+   - prefix_term: phrase to prefix the features in the output.
 
 References:
 

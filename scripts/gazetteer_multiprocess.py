@@ -60,32 +60,32 @@ def write_to_csv(_dict, output):
         for key, value in _dict.items():
             writer.writerow([key, value])
 
-def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, output):
+def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, prefix, output):
     
     delete_if_exists(output)
-    cdc_symptoms = ['fever', 'cough', 'dyspnea', 'fatigue',
-                    'aches', 'headaches', 'taste smell loss',
-                    'sore throat', 'rhinitis congestion', 'nausea vomiting',
-                    'diarrhea']
     
     new_cdc_symptoms = ['PAT_ID', 'NOTE_ID']
-    for x in cdc_symptoms:
-        words_pos = x.split()
-        words_pos.append('p')
-        words_pos.insert(0, 'cdc')
-        words_neg = x.split()
-        words_neg.append('n')
-        words_neg.insert(0, 'cdc')
-        words_neutral = x.split()
+    
+    for file, sym in _dict_positive.items():
+        for symptom, value in sym.items():
+            words_pos = symptom.split()
+            words_pos.append('p')
+            words_pos.insert(0, prefix)
+            words_neg = symptom.split()
+            words_neg.append('n')
+            words_neg.insert(0, prefix)
+            words_neutral = symptom.split()
         
-        new_pos = '_'.join(words_pos)
-        new_neg = '_'.join(words_neg)
-        new_neutral = '_'.join(words_neutral)
+            new_pos = '_'.join(words_pos)
+            new_neg = '_'.join(words_neg)
+            new_neutral = '_'.join(words_neutral)
         
-        new_cdc_symptoms.append(new_pos)
-        #new_cdc_symptoms.append(new_neutral)
-        new_cdc_symptoms.append(new_neg)
-        
+            new_cdc_symptoms.append(new_pos)
+            #new_cdc_symptoms.append(new_neutral)
+            new_cdc_symptoms.append(new_neg)
+      
+        break
+            
     with open(output, 'w', newline = '') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(new_cdc_symptoms)
@@ -337,10 +337,7 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                     update_mdict(dict_files_negative, name, string_id)
                                 break
                                     
-def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, dict_gaz, output):
-    
-    cdc_symptoms = ['cough', 'dyspnea', 'fatigue', 'headaches', 'aches', 'taste smell loss', 'sore throat', 
-                    'rhinitis congestion', 'nausea vomiting', 'diarrhea', 'fever']
+def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, dict_gaz, prefix, output):
     
     manager = mp.Manager()
     dict_files_positive = manager.dict()
@@ -391,7 +388,7 @@ def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, d
         processes[i].join()
                        
     update_final_mdict(dict_files_final, dict_files_positive, dict_files_negative)
-    write_to_csv_pos_neg_final(dict_files_positive, dict_files_negative, dict_files_final, output)
+    write_to_csv_pos_neg_final(dict_files_positive, dict_files_negative, dict_files_final, prefix, output)
     
     #print(dict_files)
     return dict_files_final
@@ -413,6 +410,7 @@ def main():
     notes_csv = sys.argv[2]
     doc_folder = sys.argv[3]
     output_gaz = sys.argv[4]
+    prefix = sys.argv[5]
     
     now = datetime.now()
     timestamp = str(datetime.timestamp(now))
@@ -425,7 +423,7 @@ def main():
     nlp_lemma = spacy.load('en_core_sci_sm')
     dict_gaz_cdc = load_gaz_cdc(nlp_lemma, gaz_csv)
     #print(dict_gaz_cdc) 
-    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_cdc, output_ts)
+    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_cdc, prefix, output_ts)
     toc = time.perf_counter()
     print(f"Finished! Annotation done in {toc - tic:0.4f} seconds")
     
