@@ -64,31 +64,31 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, pref
     
     delete_if_exists(output)
     
-    new_cdc_symptoms = ['PAT_ID', 'NOTE_ID']
+    new_lex_concepts = ['PAT_ID', 'NOTE_ID']
     
     for file, sym in _dict_positive.items():
-        for symptom, value in sym.items():
-            words_pos = symptom.split()
+        for concept, value in sym.items():
+            words_pos = concept.split()
             words_pos.append('p')
             words_pos.insert(0, prefix)
-            words_neg = symptom.split()
+            words_neg = concept.split()
             words_neg.append('n')
             words_neg.insert(0, prefix)
-            words_neutral = symptom.split()
+            words_neutral = concept.split()
         
             new_pos = '_'.join(words_pos)
             new_neg = '_'.join(words_neg)
             new_neutral = '_'.join(words_neutral)
         
-            new_cdc_symptoms.append(new_pos)
+            new_lex_concepts.append(new_pos)
             #new_cdc_symptoms.append(new_neutral)
-            new_cdc_symptoms.append(new_neg)
+            new_lex_concepts.append(new_neg)
       
         break
             
     with open(output, 'w', newline = '') as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(new_cdc_symptoms)
+        writer.writerow(new_lex_concepts)
         #count = 0
         for key, value in _dict_positive.items():
             pat_id, note_id = key.split('_')
@@ -102,13 +102,13 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, pref
             writer.writerow(li_men)
             #count = count + 1
 
-def init_dict(manager, _dict, notes_for_training, dict_gold_cdc_cui):
+def init_dict(manager, _dict, notes_for_training, dict_gold_lex_cui):
     
     for file in notes_for_training:
         #name = file.replace('.source', '')
         name = file.strip()
         _dict[name] = manager.dict()
-        for k, v in dict_gold_cdc_cui.items():
+        for k, v in dict_gold_lex_cui.items():
             _dict[name][k] = 0
     
     #print(_dict)
@@ -150,7 +150,7 @@ def diff(li1, li2):
 def split(a, n):
     return [a[i::int(n)] for i in range(int(n))]
     
-def load_gaz_cdc(nlp, filename):
+def load_gaz(nlp, filename):
     
     _dict = defaultdict(list)
     
@@ -165,15 +165,21 @@ def load_gaz_cdc(nlp, filename):
     return _dict
     
 def get_gaz_matches(nlp, matcher, texts):
-    
-    for text in texts:
+   
+    # texts -> sent_list
+    # replace
+    for i in range(len(texts)):
+    #for text in texts:
+        
+        text = texts[i]
         doc = nlp(text.lower())
         for w in doc:
             _ = doc.vocab[w.text]
         matches = matcher(doc)
         for match_id, start, end in matches:
             string_id = nlp.vocab.strings[match_id]
-            yield (string_id, doc[start:end].text, text)
+            #yield (string_id, doc[start:end].text, text)
+            yield (string_id, doc[start:end].text, text, i, start, end)
                 
 def create_rule(nlp, words):
     
@@ -309,9 +315,11 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
     
     for file in notes:
         with open(os.path.join(doc_folder, file), 'r') as f:
+
+            # sentences stored i list per file
             sent_list = break_into_sentences(nlp_neg, f.read())
             #print(sent_list)
-            for string_id, men, text in get_gaz_matches(nlp_neg, matcher, sent_list):
+            for string_id, men, text, i, start, end in get_gaz_matches(nlp_neg, matcher, sent_list):
                 words = [token.lemma_ for token in nlp_lemma(men.lower().strip())]
                 sent_words = [token.lemma_ for token in nlp_lemma(text.lower().strip())]
                 new_str = join_words(words)
@@ -339,6 +347,9 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                     update_mdict(dict_files_positive, name, string_id)
                                 if men_bool == False:
                                     update_mdict(dict_files_negative, name, string_id)
+                                
+                                # create function to write out offsets, etc.
+                                
                                 break
                                     
 def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, dict_gaz, prefix, output):
@@ -420,9 +431,8 @@ def main():
     
     tic = time.perf_counter()
     nlp_lemma = spacy.load('en_core_sci_sm')
-    dict_gaz_cdc = load_gaz_cdc(nlp_lemma, gaz_csv)
-    #print(dict_gaz_cdc) 
-    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_cdc, prefix, output_ts)
+    dict_gaz_lex = load_gaz(nlp_lemma, gaz_csv)
+    #print(dict_gaz_cdc) :gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_lex, prefix, output_ts)
     toc = time.perf_counter()
     print(f"Finished! Annotation done in {toc - tic:0.4f} seconds")
     
