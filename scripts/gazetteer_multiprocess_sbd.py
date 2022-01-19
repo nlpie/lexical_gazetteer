@@ -52,6 +52,16 @@ def delete_if_exists(filename):
     except OSError:
         pass
 
+def write_mention(_dict, file_path):
+    
+    with open(file_path, 'a') as file:
+        w = csv.DictWriter(file, _dict.keys())
+
+        if file.tell() == 0:
+            w.writeheader()
+
+        w.writerow(_dict)
+
 def write_to_csv(_dict, output):
     
     delete_if_exists(output)
@@ -174,8 +184,7 @@ def get_gaz_matches(nlp, matcher, texts):
             _ = doc.vocab[w.text]
         matches = matcher(doc)
         for match_id, start, end in matches:
-            string_id = nlp.vocab.strings[match_id]
-            
+            string_id = nlp.vocab.strings[match_id]   
             yield (string_id, doc[start:end].text, text, start, end, i, doc[start:end])
                 
 def create_rule(nlp, words):
@@ -306,9 +315,10 @@ def break_into_sentences(nlp, text):
     doc = nlp(text)
     sent_list = [t.text for t in doc.sents]
     return sent_list
-   
+
+  
 def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder, 
-                 dict_files_positive, dict_files_negative):
+                 dict_files_positive, dict_files_negative, output):
     
     for file in notes:
         with open(os.path.join(doc_folder, file), 'r') as f:
@@ -316,8 +326,9 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
             #print(sent_list)
             for string_id, men, text, start, end, i, span in get_gaz_matches(nlp_neg, matcher, sent_list):
                 
-                
-                print(span.start_char - span.sent.start_char, span.end_char - span.sent.start_char)
+                # print offset
+                #print(span.start_char - span.sent.start_char, span.end_char - span.sent.start_char)
+               
                 words = [token.lemma_ for token in nlp_lemma(men.lower().strip())]
                 sent_words = [token.lemma_ for token in nlp_lemma(text.lower().strip())]
                 new_str = join_words(words)
@@ -325,7 +336,7 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                 
                 name = file.strip()
                 content = name + ', [' + new_str_sent + '], ' + men + ', ' + string_id + ', (' + str(start) + ',' + str(end) + '), ' + str(i) + ', ' + '\n'
-                print(content)
+                #print(content)
                 
                 # additional conditions to detect use case like: '... no fever. Patient has sore throat ...'
                 split_strings = new_str_sent.split('.')
@@ -345,6 +356,18 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                     update_mdict(dict_files_positive, name, string_id)
                                 if men_bool == False:
                                     update_mdict(dict_files_negative, name, string_id)
+                                
+                                # sentence-level mention
+                                mention = { "file": name,
+                                            "sentence": new_str_sent,
+                                            "negation": men_bool,
+                                            "men": e.text,
+                                            "concept": string_id,
+                                            "token_start": start,
+                                            "token_end": end,
+                                            "sentencce_n": i }
+                                            
+                                write_mention(mention, 'mention_' + output.split('_')[1])
                                 
                                 break
                                     
@@ -386,7 +409,7 @@ def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, d
     processes = []
     for i in range(len(chunks)):
         processes.append(mp.Process(target=core_process, args=(nlp_lemma, nlp_neg, matcher, chunks[i], doc_folder, 
-                 dict_files_positive, dict_files_negative, )))
+                 dict_files_positive, dict_files_negative, output, )))
     for i in range(len(chunks)):
         processes[i].start()
     
