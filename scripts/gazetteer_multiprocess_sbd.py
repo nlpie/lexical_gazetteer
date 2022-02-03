@@ -1,4 +1,4 @@
-import os
+mport os
 import sys
 import string
 from string import punctuation
@@ -365,7 +365,7 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                             "concept": string_id,
                                             "token_start": start,
                                             "token_end": end,
-                                            "sentencce_n": i }
+                                            "sentence_n": i }
                                             
                                 write_mention(mention, 'mention_' + output.split('_')[1])
                                 
