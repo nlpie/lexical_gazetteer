@@ -1,4 +1,4 @@
-mport os
+import os
 import sys
 import string
 from string import punctuation
@@ -59,6 +59,7 @@ def write_mention(_dict, file_path):
 
         if file.tell() == 0:
             w.writeheader()
+
 
         w.writerow(_dict)
 
@@ -366,7 +367,7 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                             "token_start": start,
                                             "token_end": end,
                                             "sentence_n": i }
-                                            
+                                
                                 write_mention(mention, 'mention_' + output.split('_')[1])
                                 
                                 break
