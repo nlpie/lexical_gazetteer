@@ -27,7 +27,7 @@ To create a docker image, simply run the following in the main directory:
 
 To run the created docker, type:
 
-```docker run -it -v mount_dir:/data ahc-nlpie-docker.artifactory.umn.edu/covid_gazetteer:latest python gazetteer_multiprocess.py GAZ_group.csv /data/notes_to_process.csv /data/data_in /data/ann_out prefix_term```
+```docker run -it  -v /var/lib/docker/data/vte/icd_negative/:/data ahc-nlpie-docker.artifactory.umn.edu/gazetteer:1  python -u  /home/gazetteer/gazetteer_multiprocess_sbd.py final_lex.csv manifest_negative.csv data_in/ negatives vte```
 
 The important arguments to docker command are:
 
