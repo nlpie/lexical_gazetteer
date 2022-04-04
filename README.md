@@ -33,6 +33,9 @@ The important arguments to docker command are:
 
 Note: The umls_rb_hybrid_gazetteer.py was designed for only the listed 11 CDC COVID-19 symptoms [7]. To run it, please make the sure your symptom labels match the 11 CDC COVID-19 symptoms labels present in GAZ_group.csv.
 
+Docker usage:
+`docker run -it  -v /var/lib/docker/data/vte/icd_negative/:/data ahc-nlpie-docker.artifactory.umn.edu/gazetteer:1  python -u  /home/gazetteer/gazetteer_multiprocess_sbd.py final_lex.csv manifest_negative.csv data_in/ negatives vte`
+
 References:
 
 1. spaCy Matcher: https://spacy.io/api/matcher
