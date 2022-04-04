@@ -317,6 +317,8 @@ def break_into_sentences(nlp, text):
     sent_list = [t.text for t in doc.sents]
     return sent_list
 
+def sentence_stats(sent_list):
+    return [len(s) for s in sent_list]
   
 def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder, 
                  dict_files_positive, dict_files_negative, output):
@@ -324,19 +326,24 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
     for file in notes:
         with open(os.path.join(doc_folder, file), 'r') as f:
             sent_list = break_into_sentences(nlp_neg, f.read())
-            #print(sent_list)
+            sent_compute = True
+
             for string_id, men, text, start, end, i, span in get_gaz_matches(nlp_neg, matcher, sent_list):
                 
                 # print offset
                 #print(span.start_char - span.sent.start_char, span.end_char - span.sent.start_char)
-               
+              
+                if sent_compute:
+                    sent_length = sentence_stats(sent_list)
+                    sent_compute = False
+    
                 words = [token.lemma_ for token in nlp_lemma(men.lower().strip())]
                 sent_words = [token.lemma_ for token in nlp_lemma(text.lower().strip())]
                 new_str = join_words(words)
                 new_str_sent = join_words(sent_words)
                 
                 name = file.strip()
-                content = name + ', [' + new_str_sent + '], ' + men + ', ' + string_id + ', (' + str(start) + ',' + str(end) + '), ' + str(i) + ', ' + '\n'
+                #content = name + ', [' + new_str_sent + '], ' + men + ', ' + string_id + ', (' + str(start) + ',' + str(end) + '), ' + str(i) + ', ' + '\n'
                 #print(content)
                 
                 # additional conditions to detect use case like: '... no fever. Patient has sore throat ...'
@@ -350,7 +357,7 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                             #print(new_str)
                             #if (e.label_ == string_id):
                             if (new_str == e.text) and (e.label_ == string_id):
-                                content = name + ', [' + new_str_sent + '], ' + e.text + ', ' + str(not e._.negex) + ', ' + string_id +  ', (' + str(start) + ',' + str(end) + '), ' + str(i) +'\n'
+                                #content = name + ', [' + new_str_sent + '], ' + e.text + ', ' + str(not e._.negex) + ', ' + string_id +  ', (' + str(start) + ',' + str(end) + '), ' + str(i) +'\n'
                                 #print(content)
                                 men_bool = not e._.negex
                                 if men_bool:
@@ -361,12 +368,13 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                 # sentence-level mention
                                 mention = { "file": name,
                                             "sentence": new_str_sent,
-                                            "negation": men_bool,
+                                            "polarity": men_bool,
                                             "men": e.text,
                                             "concept": string_id,
-                                            "token_start": start,
-                                            "token_end": end,
-                                            "sentence_n": i }
+                                            "start": span.start_char, 
+                                            "end", span.end_char,
+                                            "sentence_n": i,
+                                            "sent_lengths": sent_length }
                                 
                                 write_mention(mention, 'mention_' + output.split('_')[1])
                                 
