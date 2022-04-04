@@ -1,6 +1,6 @@
 # gazetteer
 
-covid_symptom_gazetteer (hereby referred as "COVID-19 gazetteer") is a high throughput annotation system for real-time indexing of unstructred clinical notes. 
+Generic lexical gazetteer (hereby referred as "lexical gazetteer") is a high throughput annotation system for real-time indexing of unstructred clinical notes. 
 
 ## Gazetteer Architecture
 
@@ -10,7 +10,7 @@ Rule-based matching [5] of generic gazetteer lexicon is automated using the foll
 
 ## Data
 
-1. Lexicon of clustered clinical terms: GAZ_group.csv
+1. Lexicon of clustered terms: GAZ_group.csv
 
 ## Requirements
 
