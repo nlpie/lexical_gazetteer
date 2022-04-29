@@ -372,7 +372,7 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                                             "men": e.text,
                                             "concept": string_id,
                                             "start": span.start_char, 
-                                            "end", span.end_char,
+                                            "end": span.end_char,
                                             "sentence_n": i,
                                             "sent_lengths": sent_length }
                                 
