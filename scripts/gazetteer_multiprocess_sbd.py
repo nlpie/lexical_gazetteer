@@ -52,6 +52,17 @@ def delete_if_exists(filename):
     except OSError:
         pass
 
+def write_mention(_dict, file_path):
+    
+    with open(file_path, 'a') as file:
+        w = csv.DictWriter(file, _dict.keys())
+
+        if file.tell() == 0:
+            w.writeheader()
+
+
+        w.writerow(_dict)
+
 def write_to_csv(_dict, output):
     
     delete_if_exists(output)
@@ -64,7 +75,7 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, pref
     
     delete_if_exists(output)
     
-    new_cdc_symptoms = ['PAT_ID', 'NOTE_ID']
+    new_lex_concepts = ['PAT_ID', 'NOTE_ID']
     
     for file, sym in _dict_positive.items():
         for symptom, value in sym.items():
@@ -80,15 +91,15 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, pref
             new_neg = '_'.join(words_neg)
             new_neutral = '_'.join(words_neutral)
         
-            new_cdc_symptoms.append(new_pos)
-            #new_cdc_symptoms.append(new_neutral)
-            new_cdc_symptoms.append(new_neg)
+            new_lex_concepts.append(new_pos)
+            #new_lex_concepts.append(new_neutral)
+            new_lex_concepts.append(new_neg)
       
         break
             
     with open(output, 'w', newline = '') as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(new_cdc_symptoms)
+        writer.writerow(new_lex_concepts)
         #count = 0
         for key, value in _dict_positive.items():
             pat_id, note_id = key.split('_')
@@ -102,13 +113,13 @@ def write_to_csv_pos_neg_final(_dict_positive, _dict_negative, _dict_final, pref
             writer.writerow(li_men)
             #count = count + 1
 
-def init_dict(manager, _dict, notes_for_training, dict_gold_cdc_cui):
+def init_dict(manager, _dict, notes_for_training, dict_gold_lex_cui):
     
     for file in notes_for_training:
         #name = file.replace('.source', '')
         name = file.strip()
         _dict[name] = manager.dict()
-        for k, v in dict_gold_cdc_cui.items():
+        for k, v in dict_gold_lex_cui.items():
             _dict[name][k] = 0
     
     #print(_dict)
@@ -150,7 +161,7 @@ def diff(li1, li2):
 def split(a, n):
     return [a[i::int(n)] for i in range(int(n))]
     
-def load_gaz_cdc(nlp, filename):
+def load_gaz_lex(nlp, filename):
     
     _dict = defaultdict(list)
     
@@ -166,14 +177,16 @@ def load_gaz_cdc(nlp, filename):
     
 def get_gaz_matches(nlp, matcher, texts):
     
-    for text in texts:
+    #for text in texts:
+    for i in range(len(texts)):
+        text = texts[i]
         doc = nlp(text.lower())
         for w in doc:
             _ = doc.vocab[w.text]
         matches = matcher(doc)
         for match_id, start, end in matches:
-            string_id = nlp.vocab.strings[match_id]
-            yield (string_id, doc[start:end].text, text)
+            string_id = nlp.vocab.strings[match_id]   
+            yield (string_id, doc[start:end].text, text, start, end, i, doc[start:end])
                 
 def create_rule(nlp, words):
     
@@ -303,22 +316,34 @@ def break_into_sentences(nlp, text):
     doc = nlp(text)
     sent_list = [t.text for t in doc.sents]
     return sent_list
-   
+
+def sentence_stats(sent_list):
+    return [len(s) for s in sent_list]
+  
 def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder, 
-                 dict_files_positive, dict_files_negative):
+                 dict_files_positive, dict_files_negative, output):
     
     for file in notes:
         with open(os.path.join(doc_folder, file), 'r') as f:
             sent_list = break_into_sentences(nlp_neg, f.read())
-            #print(sent_list)
-            for string_id, men, text in get_gaz_matches(nlp_neg, matcher, sent_list):
+            sent_compute = True
+
+            for string_id, men, text, start, end, i, span in get_gaz_matches(nlp_neg, matcher, sent_list):
+                
+                # print offset
+                #print(span.start_char - span.sent.start_char, span.end_char - span.sent.start_char)
+              
+                if sent_compute:
+                    sent_length = sentence_stats(sent_list)
+                    sent_compute = False
+    
                 words = [token.lemma_ for token in nlp_lemma(men.lower().strip())]
                 sent_words = [token.lemma_ for token in nlp_lemma(text.lower().strip())]
                 new_str = join_words(words)
                 new_str_sent = join_words(sent_words)
                 
                 name = file.strip()
-                content = name + ', [' + new_str_sent + '], ' + men + ', ' + string_id + '\n'
+                #content = name + ', [' + new_str_sent + '], ' + men + ', ' + string_id + ', (' + str(start) + ',' + str(end) + '), ' + str(i) + ', ' + '\n'
                 #print(content)
                 
                 # additional conditions to detect use case like: '... no fever. Patient has sore throat ...'
@@ -332,13 +357,29 @@ def core_process(nlp_lemma, nlp_neg, matcher, notes, doc_folder,
                             #print(new_str)
                             #if (e.label_ == string_id):
                             if (new_str == e.text) and (e.label_ == string_id):
-                                content = name + ', [' + new_str_sent + '], ' + e.text + ', ' + str(not e._.negex) + ', ' + string_id + '\n'
+                                #content = name + ', [' + new_str_sent + '], ' + e.text + ', ' + str(not e._.negex) + ', ' + string_id +  ', (' + str(start) + ',' + str(end) + '), ' + str(i) +'\n'
                                 #print(content)
                                 men_bool = not e._.negex
                                 if men_bool:
                                     update_mdict(dict_files_positive, name, string_id)
                                 if men_bool == False:
                                     update_mdict(dict_files_negative, name, string_id)
+                                
+                                # sentence-level mention
+                                mention = { "file": name,
+                                            "sentence": new_str_sent,
+                                            "polarity": men_bool,
+                                            "men": e.text,
+                                            "concept": string_id,
+                                            "start": span.start_char, 
+                                            "end": span.end_char,
+                                            "span.sent.start_char": span.sent.start_char,
+                                            "span.sent.end_char": span.sent.end_char,
+                                            "sentence_n": i,
+                                            "sent_lengths": sent_length }
+                                
+                                write_mention(mention, 'mention_' + output.split('_')[1])
+                                
                                 break
                                     
 def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, dict_gaz, prefix, output):
@@ -379,7 +420,7 @@ def mention_using_gaz(nlp_lemma, gaz_csv_list, notes_for_training, doc_folder, d
     processes = []
     for i in range(len(chunks)):
         processes.append(mp.Process(target=core_process, args=(nlp_lemma, nlp_neg, matcher, chunks[i], doc_folder, 
-                 dict_files_positive, dict_files_negative, )))
+                 dict_files_positive, dict_files_negative, output, )))
     for i in range(len(chunks)):
         processes[i].start()
     
@@ -420,9 +461,9 @@ def main():
     
     tic = time.perf_counter()
     nlp_lemma = spacy.load('en_core_sci_sm')
-    dict_gaz_cdc = load_gaz_cdc(nlp_lemma, gaz_csv)
-    #print(dict_gaz_cdc) 
-    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_cdc, prefix, output_ts)
+    dict_gaz_lex = load_gaz_lex(nlp_lemma, gaz_csv)
+    #print(dict_gaz_lex) 
+    gaz_men = mention_using_gaz(nlp_lemma, gaz_csv_list, notes_list, doc_folder, dict_gaz_lex, prefix, output_ts)
     toc = time.perf_counter()
     print(f"Finished! Annotation done in {toc - tic:0.4f} seconds")
     
