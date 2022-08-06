@@ -31,7 +31,7 @@ To run the created docker, type:
 
 The important arguments to docker command are:
 
-   - notes_to_process.csv: notes to be annotated. The file should not contain any header.
+   - notes_to_process.csv: manifest of notes to be annotated. The file should not contain any header columns.
    - data_in: directory containing the notes.
    - mount_dir: directory containing notes_to_process.csv and data_in directory.
    - ann_out: annotated output.
