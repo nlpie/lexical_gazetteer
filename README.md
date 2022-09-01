@@ -23,7 +23,7 @@ Rule-based matching [5] of generic gazetteer lexicon is automated using the foll
 
 To create a docker image, simply run the following in the main directory:
 
-```docker build -t ahc-nlpie-docker.artifactory.umn.edu/covid_gazetteer .```
+```docker build -t ahc-nlpie-docker.artifactory.umn.edu/gazetteer .```
 
 To run the created docker, type:
 
