@@ -1,16 +1,16 @@
-# covid_symptoms_gazetteer
+# gazetteer
 
-covid_symptom_gazetteer (hereby referred as "COVID-19 gazetteer") is a high throughput annotation system for real-time indexing of COVID-19 unstructred clinical notes. 
+Generic lexical gazetteer (hereby referred as "lexical gazetteer") is a high throughput annotation system for real-time indexing of unstructred clinical notes. 
 
-## COVID-19 Gazetteer Architecture
+## Gazetteer Architecture
 
-The COVID-19 gazetteer utilizes spaCy’s Matcher [1] class along withEntityRuler [2] class to add the terms in gazetteer lexicon to the spaCy en_core_web_sm [3] model. The Matcher instance reads in ED admission notes and returns symptom mentions and the span of text containing each mention. Returned spans are further processed by the spaCypipeline to search for custom entities added by the EntityRuler. Theoutput is then lemmatized to convert the text to its canonical form.The NegEx component of spaCy (negspaCy [4]) is used for negation detection.
+The lexical gazetteer utilizes spaCy’s Matcher [1] class along withEntityRuler [2] class to add the terms in gazetteer lexicon to the spaCy en_core_web_sm [3] model. The Matcher instance reads in ED admission notes and returns symptom mentions and the span of text containing each mention. Returned spans are further processed by the spaCypipeline to search for custom entities added by the EntityRuler. Theoutput is then lemmatized to convert the text to its canonical form.The NegEx component of spaCy (negspaCy [4]) is used for negation detection.
 
-Rule-based matching [5] of COVID-19 gazetteer lexicon is automated using the following token attributes in spaCy: base form of the word (LEMMA); universal part-of-speech tag (POS); detailed POS tag (TAG); and punctuation (IS PUNCT) [6].
+Rule-based matching [5] of generic gazetteer lexicon is automated using the following token attributes in spaCy: base form of the word (LEMMA); universal part-of-speech tag (POS); detailed POS tag (TAG); and punctuation (IS PUNCT) [6].
 
 ## Data
 
-1. Lexicon of symptoms clustered around 11 major Center for Disease Control and Prevention (CDC) COVID-19 symptoms [7]: GAZ_group.csv
+1. Lexicon of clustered terms: GAZ_group.csv
 
 ## Requirements
 
@@ -19,11 +19,11 @@ Rule-based matching [5] of COVID-19 gazetteer lexicon is automated using the fol
 - spacy==2.3.5
 - negspacy==0.1.9
 
-## Creating and Executing COVID-19 Gazetteer
+## Creating and Executing Gazetteer
 
 To create a docker image, simply run the following in the main directory:
 
-```docker build -t ahc-nlpie-docker.artifactory.umn.edu/covid_gazetteer .```
+```docker build -t ahc-nlpie-docker.artifactory.umn.edu/gazetteer .```
 
 To run the created docker, type:
 
@@ -31,7 +31,7 @@ To run the created docker, type:
 
 The important arguments to docker command are:
 
-   - notes_to_process.csv: notes to be annotated. The file should not contain any header.
+   - notes_to_process.csv: manifest of notes to be annotated. The file should not contain any header columns.
    - data_in: directory containing the notes.
    - mount_dir: directory containing notes_to_process.csv and data_in directory.
    - ann_out: annotated output.
@@ -50,5 +50,3 @@ References:
 5. spaCy Rule-Based Matching: https://spacy.io/usage/rule-based-matching
 
 6. spaCy Token: https://spacy.io/api/token
-
-7. Symptoms of Coronavirus: https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
