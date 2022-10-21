@@ -10,7 +10,9 @@ Rule-based matching [5] of generic gazetteer lexicon is automated using the foll
 
 ## Data
 
-1. Lexicon of clustered terms: GAZ_group.csv
+1. Example lexicon of clustered terms: 
+[PASC symptoms](https://github.com/nlpie/lexical_gazetteer/blob/main/lexica/covid_pasc/PASC_group.csv)
+[Acute COVID-19 symptoms](https://github.com/nlpie/lexical_gazetteer/blob/main/lexica/covid_pasc/ACUTE_group.csv)
 
 ## Requirements
 
