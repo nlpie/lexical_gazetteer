@@ -29,14 +29,14 @@ To create a docker image, simply run the following in the main directory:
 
 To run the created docker, type:
 
-```docker run -it  -v /var/lib/docker/data/vte/icd_negative/:/data ahc-nlpie-docker.artifactory.umn.edu/gazetteer:1  python -u  /home/gazetteer/gazetteer_multiprocess_sbd.py final_lex.csv manifest_negative.csv data_in/ negatives vte```
+```docker run -it  -v <local_path>:/data ahc-nlpie-docker.artifactory.umn.edu/gazetteer:1  python -u  /home/gazetteer/gazetteer_multiprocess_sbd.py <lexicon_name>.csv <notes_to_process>.csv data_in/ <ann_out> <prefix_term>```
 
 The important arguments to docker command are:
 
+   - lexicon_name.csv: lexicon of termrs
    - notes_to_process.csv: manifest of notes to be annotated. The file should not contain any header columns.
    - data_in: directory containing the notes.
-   - mount_dir: directory containing notes_to_process.csv and data_in directory.
-   - ann_out: annotated output.
+   - ann_out: annotated output written to file.
    - prefix_term: phrase to prefix the features in the output.
 
 References:
