@@ -17,7 +17,6 @@ Foggy thinking,brain fog
 Mental fog,brain fog
 Mental fogginess,brain fog
 angina,chest pain
-Angina,chest pain
 Chest heaviness,chest pain
 Chest pain,chest pain
 Chest tightness,chest pain
@@ -51,9 +50,6 @@ Dysthymia,depression
 Situational depression,depression
 Dizzines,dizziness
 Dizziness,dizziness
-dizziness,dizziness
-dizziness,dizziness
-dizziness,dizziness
 Dizzy,dizziness
 Dizzy spell,dizziness
 Dizzy spells,dizziness
@@ -137,7 +133,6 @@ Neck stiffness,headaches
 Occipital headache,headaches
 Phonophobia,headaches
 Photophobia,headaches
-Photophobia,headaches
 Photophobic,headaches
 Pounding headache,headaches
 Terrible headache,headaches
@@ -166,7 +161,6 @@ Poor sleep,insomnia
 Sleep disturbance,insomnia
 Sleep symptoms,insomnia
 Sleeps during day,insomnia
-Trouble falling asleep,insomnia
 Trouble falling asleep,insomnia
 Trouble sleeping,insomnia
 Wake up at night,insomnia
@@ -207,9 +201,6 @@ Occasional palpitations,palpitation
 Palpations,palpitation
 Palpitation,palpitation
 Palpitations,palpitation
-Palpitations,palpitation
-Palpitations,palpitation
-Palpitations,palpitation
 Persistent tachycardia,palpitation
 Persistently tachycardic,palpitation
 Presyncope,palpitation
@@ -218,7 +209,6 @@ Racing heart beat,palpitation
 Sinus tachycardia,palpitation
 SVT,palpitation
 Tachcardia,palpitation
-Tachycardia,palpitation
 Tachycardia,palpitation
 Tachycardiac ,palpitation
 Tachycardic,palpitation
@@ -256,10 +246,8 @@ Rash itches,skin rash
 Red blotchy rash,skin rash
 Red bumps,skin rash
 Red bumpy rash,skin rash
-Red bumpy rash,skin rash
 Red dots,skin rash
 Red itchy bumps,skin rash
-Red itchy rash,skin rash
 Red itchy rash,skin rash
 Red raised bumps,skin rash
 Red raised rash,skin rash
