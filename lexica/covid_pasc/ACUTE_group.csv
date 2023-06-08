@@ -1,171 +1,170 @@
-Fever or chills,Fever
-Fever,Fever
-Chills,Fever
-F/C,Fever
-fever/chills,Fever
-Rigors,Fever
-Shivering,Fever
-Febrile,Fever
-High Temperature,Fever
-High Temp,Fever
-Elevated temperature,Fever
-Elevated temp,Fever
-Hyperthermia,Fever
-Hyperpyrexia,Fever
-Night Sweats,Fever
-Diaphoresis,Fever
-Diaphoretic,Fever
-Sweaty,Fever
-Shakes,Fever
-Shakiness,Fever
-Shakey,Fever
-Tremor,Fever
+Aches,Aches
+Aches and Pains,Aches
+Achey,Aches
+Achiness,Aches
+Achy,Aches
+Arthralgia,Aches
+Body Aches,Aches
+Calf pain,Aches
+Meningismus,Aches
+Muscle Aches,Aches
+Muscle cramps,Aches
+Muscle or body aches,Aches
+Muscle pains,Aches
+Myalgias,Aches
+Myodynia,Aches
+Neck Pain,Aches
+Soreness,Aches
 Cough,Cough
 Non-productive cough,Cough
 Productive cough,Cough
-Hypoxia,Dyspnea
-Shortness of breath or difficulty breathing,Dyspnea
-Shortness of breath,Dyspnea
-Short of breath,Dyspnea
-SOB,Dyspnea
+Abdominal bloating,Diarrhea
+Abdominal cramping,Diarrhea
+Catharsis,Diarrhea
+Diarrhea,Diarrhea
+Explosive diarrhea,Diarrhea
+Gastrointestinal symptoms,Diarrhea
+GI symptoms,Diarrhea
+Liquid stools,Diarrhea
+Loose stool,Diarrhea
+Purgation,Diarrhea
+Trots,Diarrhea
+Upset stomach,Diarrhea
+Watery stools,Diarrhea
 Breathlessness,Dyspnea
-Respiratory distress,Dyspnea
-Respiratory difficulty,Dyspnea
-Trouble breathing,Dyspnea
-Labored breathing,Dyspnea
-Wheezing,Dyspnea
-Dyspnea,Dyspnea
-DOE,Dyspnea
-Dyspnea on Exertion,Dyspnea
-PND,Dyspnea
-Paroxysmal nocturnal dyspnea,Dyspnea
 Cannot Breathe,Dyspnea
 Can't breathe,Dyspnea
 Difficulty Breathing,Dyspnea
-Pleurisy,Dyspnea
-Pain with inspiration,Dyspnea
+DOE,Dyspnea
+Dyspnea,Dyspnea
+Dyspnea on Exertion,Dyspnea
+Hypoxia,Dyspnea
 Inspiratory pain,Dyspnea
+Labored breathing,Dyspnea
 Orthopnea,Dyspnea
-Fatigue,Fatigue
-Tired,Fatigue
+Pain with inspiration,Dyspnea
+Paroxysmal nocturnal dyspnea,Dyspnea
+Pleurisy,Dyspnea
+PND,Dyspnea
+Respiratory difficulty,Dyspnea
+Respiratory distress,Dyspnea
+Short of breath,Dyspnea
+Shortness of breath,Dyspnea
+Shortness of breath or difficulty breathing,Dyspnea
+SOB,Dyspnea
+Trouble breathing,Dyspnea
+Wheezing,Dyspnea
+Asthenia,Fatigue
+Debilitation,Fatigue
 Exhausted,Fatigue
 Exhaustion,Fatigue
+Fatigue,Fatigue
 Lethargy,Fatigue
-Prostration,Fatigue
+Low Energy,Fatigue
 Malaise,Fatigue
+Out of it,Fatigue
+Prostration,Fatigue
+Sleepy,Fatigue
+Tired,Fatigue
 Tiredness,Fatigue
 Weakness,Fatigue
-Debilitation,Fatigue
 Weariness,Fatigue
-Asthenia,Fatigue
 Worn out,Fatigue
-Low Energy,Fatigue
-Sleepy,Fatigue
-Out of it,Fatigue
-Muscle or body aches,Aches
-Muscle Aches,Aches
-Muscle pains,Aches
-Body Aches,Aches
-Aches and Pains,Aches
-Soreness,Aches
-Myalgias,Aches
-Myodynia,Aches
-Muscle cramps,Aches
-Achey,Aches
-Achy,Aches
-Aches,Aches
-Achiness,Aches
-Arthralgia,Aches
-Calf pain,Aches
-Neck Pain,Aches
-Meningismus,Aches
+Chills,Fever
+Diaphoresis,Fever
+Diaphoretic,Fever
+Elevated temp,Fever
+Elevated temperature,Fever
+F/C,Fever
+Febrile,Fever
+Fever,Fever
+Fever or chills,Fever
+fever/chills,Fever
+High Temp,Fever
+High Temperature,Fever
+Hyperpyrexia,Fever
+Hyperthermia,Fever
+Night Sweats,Fever
+Rigors,Fever
+Shakes,Fever
+Shakey,Fever
+Shakiness,Fever
+Shivering,Fever
+Sweaty,Fever
+Tremor,Fever
+Cephalalgia,Headaches
+Cephalic pain,Headaches
 Headache,Headaches
 Migraine,Headaches
-Cephalic pain,Headaches
-Cephalalgia,Headaches
-Confusion,Headaches
-Disorientation,Headaches
-Delirium,Headaches
-Discombobulation,Headaches
-Out of it,Headaches
-Sleepy,Headaches
-New loss of taste or smell,Taste smell loss
-Loss of Taste,Taste smell loss
-Metallic taste,Taste smell loss
-Hypogeusia,Taste smell loss
-Dysgeusia,Taste smell loss
-Distaste,Taste smell loss
-Can't taste,Taste smell loss
-Cannot taste,Taste smell loss
-Loss of Smell,Taste smell loss
-Can't smell,Taste smell loss
-Cannot smell,Taste smell loss
-Ageusia,Taste smell loss
-Anosmia,Taste smell loss
-Lack of olfactory sense,Taste smell loss
-Dysosmia,Taste smell loss
-Sore Throat,Sore Throat
-Scratchy throat,Sore Throat
-Throat pain,Sore Throat
-Throat irritation,Sore Throat
-Pharyngitis,Sore Throat
-Laryngitis,Sore Throat
-Painful swallowing,Sore Throat
-Odynophagia,Sore Throat
-Difficulty swallowing,Sore Throat
-Hoarse voice,Sore Throat
-Dysphagia,Sore Throat
-Congestion or runny nose,Rhinitis Congestion
-Nasal Congestion,Rhinitis Congestion
-Sinus congestion,Rhinitis Congestion
-Congested,Rhinitis Congestion
-Congestion,Rhinitis Congestion
-Stuffy nose,Rhinitis Congestion
-Runny Nose,Rhinitis Congestion
-Rhinorrhea,Rhinitis Congestion
-Sniffles,Rhinitis Congestion
-Mucusy,Rhinitis Congestion
-Nasal discharge,Rhinitis Congestion
-Rhinitis,Rhinitis Congestion
-Nausea or vomiting,Nausea vomiting
-Nausea,Nausea vomiting
-Queasiness,Nausea vomiting
-Food aversion,Nausea vomiting
-Vomiting,Nausea vomiting
-Stomach sickness,Nausea vomiting
-Retching,Nausea vomiting
-Throwing up,Nausea vomiting
-Gagging,Nausea vomiting
-N/V,Nausea vomiting
-nausea/vomiting,Nausea vomiting
-GI symptoms,Nausea vomiting
-Gastrointestinal symptoms,Nausea vomiting
-Upset stomach,Nausea vomiting
-Purgation,Nausea vomiting
+Abdominal bloating,Nausea vomiting
 Abdominal cramping,Nausea vomiting
 Abdominal cramps,Nausea vomiting
-Cramps,Nausea vomiting
-Abdominal bloating,Nausea vomiting
 Abdominal pain,Nausea vomiting
-Emesis,Nausea vomiting
-Queasy,Nausea vomiting
-Dry heaves,Nausea vomiting
 Anorexia,Nausea vomiting
+Cramps,Nausea vomiting
+Dry heaves,Nausea vomiting
+Dyspepsia,Nausea vomiting
+Emesis,Nausea vomiting
+Food aversion,Nausea vomiting
+Gagging,Nausea vomiting
+Gastrointestinal symptoms,Nausea vomiting
+GI symptoms,Nausea vomiting
+Heartburn,Nausea vomiting
+N/V,Nausea vomiting
+Nausea,Nausea vomiting
+Nausea or vomiting,Nausea vomiting
+nausea/vomiting,Nausea vomiting
+Not Eating,Nausea vomiting
 Not hungry,Nausea vomiting
 Poor Appetite,Nausea vomiting
-Not Eating,Nausea vomiting
-Heartburn,Nausea vomiting
-Dyspepsia,Nausea vomiting
-Diarrhea,Diarrhea
-Trots,Diarrhea
-Loose stool,Diarrhea
-Liquid stools,Diarrhea
-Watery stools,Diarrhea
-Explosive diarrhea,Diarrhea
-Catharsis,Diarrhea
-Purgation,Diarrhea
-GI symptoms,Diarrhea
-Gastrointestinal symptoms,Diarrhea
-Upset stomach,Diarrhea
-Abdominal cramping,Diarrhea
-Abdominal bloating,Diarrhea
+Purgation,Nausea vomiting
+Queasiness,Nausea vomiting
+Queasy,Nausea vomiting
+Retching,Nausea vomiting
+Stomach sickness,Nausea vomiting
+Throwing up,Nausea vomiting
+Upset stomach,Nausea vomiting
+Vomiting,Nausea vomiting
+Congested,Rhinitis Congestion
+Congestion,Rhinitis Congestion
+Congestion or runny nose,Rhinitis Congestion
+Mucusy,Rhinitis Congestion
+Nasal Congestion,Rhinitis Congestion
+Nasal discharge,Rhinitis Congestion
+Rhinitis,Rhinitis Congestion
+Rhinorrhea,Rhinitis Congestion
+Runny Nose,Rhinitis Congestion
+Sinus congestion,Rhinitis Congestion
+Sniffles,Rhinitis Congestion
+Stuffy nose,Rhinitis Congestion
+Difficulty swallowing,Sore Throat
+Dysphagia,Sore Throat
+Hoarse voice,Sore Throat
+Laryngitis,Sore Throat
+Odynophagia,Sore Throat
+Painful swallowing,Sore Throat
+Pharyngitis,Sore Throat
+Scratchy throat,Sore Throat
+Sore Throat,Sore Throat
+Throat irritation,Sore Throat
+Throat pain,Sore Throat
+Ageusia,Taste smell loss
+Anosmia,Taste smell loss
+Cannot smell,Taste smell loss
+Cannot taste,Taste smell loss
+Can't smell,Taste smell loss
+Can't taste,Taste smell loss
+Distaste,Taste smell loss
+Dysgeusia,Taste smell loss
+Dysosmia,Taste smell loss
+Hypogeusia,Taste smell loss
+Lack of olfactory sense,Taste smell loss
+Loss of Smell,Taste smell loss
+Loss of Taste,Taste smell loss
+Metallic taste,Taste smell loss
+New loss of taste or smell,Taste smell loss
+Confusion,thinking difficulty
+Delirium,thinking difficulty
+Discombobulation,thinking difficulty
+Disorientation,thinking difficulty
+Out of it,thinking difficulty

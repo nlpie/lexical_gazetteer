@@ -1,466 +1,458 @@
-Fatigue,fatigue
-Extreme fatigue,fatigue
-Generalized fatigue,fatigue
-Tiredness,fatigue
-Profound fatigue,fatigue
-Feeling fatigued,fatigue
-Exhaustion,fatigue
-Malaise ,fatigue
-Feeling weak,fatigue
-weakness,fatigue
-Loss of energy,fatigue
-No energy,fatigue
-Post-exertional malaise,dyspnea
-Poor exercise tolerance,dyspnea
-Shortness of breath,dyspnea
-SOB,dyspnea
-DOE,dyspnea
-Dyspnea ,dyspnea
-Dyspnea on exertion,dyspnea
-Difficulty breathing,dyspnea
-Breathlessness,dyspnea
-Cough,cough
-Dry cough,cough
-Congestion,cough
-Coughing,cough
-Nonproductive cough,cough
-URI symptoms,cough
-Productive cough,cough
-Phlegm production,cough
-Coughing spells,cough
-Coughing fits,cough
-Sputum production,cough
-Hacking cough,cough
-Dry nonproductive cough,cough
-URI,cough
-Mildly productive cough,cough
-Rattling,cough
-Occasionally productive,cough
-Clear phlegm,cough
-Cold,cough
-Coughing jags,cough
-Sinus congestion,cough
-Nagging cough,cough
-Joint pain,joint pain
-Joint stiffness,joint pain
-JP,joint pain
-Arthralgia,joint pain
-Arthritis,joint pain
-Chest pain,chest pain
-Inflammation of heart muscle,chest pain
-angina,chest pain
-Angina,chest pain
-CP,chest pain
-Chest tightness,chest pain
-Chest heaviness,chest pain
-Foggy thinking,brain fog
-Mental fog,brain fog
-Mental fogginess,brain fog
-Foggy brain,brain fog
-Fogginess,brain fog
-Brain fog,brain fog
-Depression,depression
-Depressed,depression
-Situational depression,depression
-Bipolar disorder,depression
-Bipolar,depression
-Dysthymia,depression
-Muscle aches,muscle pain
-Myalgias,muscle pain
-Aches,muscle pain
-Headache,headaches
-Frontal headache,headaches
-Throbbing headache,headaches
-Dull headache,headaches
-Occipital headache,headaches
-Headaches,headaches
-Pounding headache,headaches
-Bitemporal headache,headaches
-Bifrontal headache,headaches
-Photophobia,headaches
-Blurry vision,headaches
-HA ,headaches
-Light sensitivity,headaches
-Frontal throbbing,headaches
-Typical migraine,headaches
-Mild frontal headache,headaches
-Photophobia,headaches
-Phonophobia,headaches
-Neck stiffness,headaches
-Blurred vision,headaches
-Terrible headache,headaches
-Visual disturbances,headaches
-Visual changes,headaches
-Head ache,headaches
-Photophobic,headaches
-Frontal HA,headaches
-Dizziness,headaches
-Lightheadedness,headaches
-Lightheadness ,headaches
-Dizziness,headaches
-Dizzines,headaches
-Light headedness,headaches
-Feeling dizzy,headaches
-Wooziness,headaches
-Feeling lightheaded,headaches
-Dizzy spells,headaches
-Dizzy upon standing,headaches
-Lightheaded,headaches
-Dizzy,headaches
-Room spinning,headaches
-Dizziness,headaches
-Feels dizzy,headaches
-Dizzy spell,headaches
-Vertigo,headaches
-Dizziness,headaches
-Feeling light headed,headaches
-Feels lightheaded,headaches
-Feeling woozy,headaches
-Light headed,headaches
-Woozy feeling,headaches
-Room spinning sensation,headaches
-Slightly dizzy,headaches
-Spinning sensation,headaches
-Feeling faint,headaches
-Vertiginous symptoms,headaches
-Fever,fever
-Intermittent fever,fever
-F/C ,fever
-fever/chills,fever
-Febrile,fever
-High Temperature,fever
-High Temp,fever
-Elevated temperature,fever
-Elevated temp,fever
-Hyperthermia,fever
-Hyperpyrexia,fever
-Palpitation,palpitation
-Palpitations,palpitation
-Palpations,palpitation
-Occasional palpitations,palpitation
-Palpitations,palpitation
-Palpitations,palpitation
-Irregular heartbeats,palpitation
-Racing heart,palpitation
-Palpitations,palpitation
-Racing heart beat,palpitation
-Presyncope,palpitation
-Tachycardia,palpitation
-Sinus tachycardia,palpitation
-Persistent tachycardia,palpitation
-Tachycardiac ,palpitation
-Persistently tachycardic,palpitation
-Tachycardic,palpitation
-Bradycardia,palpitation
-SVT,palpitation
-Tachycardia,palpitation
-Tachcardia,palpitation
-Heart palpitations,palpitation
-Rash,skin rash
-Prutitic,skin rash
-Itchy rash,skin rash
-Itching,skin rash
-Pruritic rash,skin rash
-Itchy,skin rash
-Very pruritic,skin rash
-Rash itches,skin rash
-Mildly itchy,skin rash
-Very itchy,skin rash
-Red bumps,skin rash
-Spreading rash,skin rash
-Mildly pruritic,skin rash
-Small red dots,skin rash
-Slightly pruritic,skin rash
-Bumpy rash,skin rash
-Itch,skin rash
-An itchy rash,skin rash
-Raised bumps,skin rash
-Hive-like,skin rash
-Red bumpy rash,skin rash
-Bug bites,skin rash
-Red dots,skin rash
-Red blotchy rash,skin rash
-Nonpruritic rash,skin rash
-Red raised bumps,skin rash
-Hive-like rash,skin rash
-Small red spots,skin rash
-Hives,skin rash
-Red itchy rash,skin rash
-Red raised rash,skin rash
-Red spots,skin rash
-Red bumpy rash,skin rash
-Itches,skin rash
-Red itchy bumps,skin rash
-Welts,skin rash
-Itchiness,skin rash
-Blotches,skin rash
-Rash anywhere else,skin rash
-Raised red bumps,skin rash
-Bumpy,skin rash
-Papular rash,skin rash
-Intensely itchy,skin rash
-Red itchy rash,skin rash
-Pimple like rash,skin rash
-Pruritus,skin rash
-Macular rash ,skin rash
-Hair loss,hair loss
-Hair thinning,hair loss
-Losing hair,hair loss
-Thinning hair,hair loss
-Hair falling out,hair loss
-Diffuse hair loss,hair loss
-Hairloss,hair loss
-Increased hair shedding,hair loss
-Alopecia,hair loss
-Loss of Taste,taste smell loss
-Metallic taste,taste smell loss
-Hypogeusia ,taste smell loss
-Dysgeusia,taste smell loss
-Distaste  ,taste smell loss
-Can't taste,taste smell loss
-Cannot taste,taste smell loss
-Loss of Smell,taste smell loss
-Can't smell,taste smell loss
-Cannot smell,taste smell loss
-Ageusia,taste smell loss
-Anosmia,taste smell loss
-Lack of olfactory sense,taste smell loss
-Dysosmia,taste smell loss
-Sleep symptoms,insomnia
-Frequent awakenings,insomnia
-Interrupted sleep,insomnia
-Poor sleep,insomnia
-Having trouble falling asleep,insomnia
-Wakes up frequently,insomnia
-Cannot fall asleep,insomnia
-Wakes frequently,insomnia
-Trouble falling asleep,insomnia
-Insomnia,insomnia
-Sleep disturbance,insomnia
-Difficulties falling asleep,insomnia
-Difficulty falling asleep,insomnia
-Trouble falling asleep,insomnia
-Difficulty staying asleep,insomnia
-Wake up at night,insomnia
-No restful sleep,insomnia
-Trouble sleeping,insomnia
-Napping during the day,insomnia
-Naps during day,insomnia
-Sleeps during day,insomnia
-Feeling unrested,insomnia
-Delayed sleep onset,insomnia
-Not waking up refreshed ,insomnia
-Excessive daytime sleepiness,insomnia
-EDS,insomnia
-Daytime somnolence,insomnia
-Poor attention,thinking difficulty
-Poor concentration,thinking difficulty
-Impaired concentration,thinking difficulty
-Trouble concentrating,thinking difficulty
-Difficulties with thinking and concentration,thinking difficulty
-Thinking difficulty,thinking difficulty
-Distractibility ,thinking difficulty
-Distracted ,thinking difficulty
-Difficulties with executive function ,memory loss
-Problem-solving difficulties,memory loss
-Cognitive dysfunction,memory loss
-Memory impairment,memory loss
-Cognitive decline,memory loss
-Cognitive impairment,memory loss
-Mild cognitive impairment,memory loss
-Cognitive deficit,memory loss
-Memory difficulties,memory loss
-Cognitive deficits,memory loss
-Memory loss,memory loss
-Memory problems,memory loss
-Short term memory issues,memory loss
-Word finding difficulties,memory loss
-Word finding difficulty,memory loss
-Difficulty finding words,memory loss
-Occasional word finding difficulty,memory loss
-Short term memory deficits,memory loss
-Trouble finding words,memory loss
-Long term memory loss,memory loss
-Anxiety,anxiety
-Panic attacks,anxiety
-Panic,anxiety
-Mind racing,anxiety
-Anxiety panic,anxiety
-Anxiety panic attacks,anxiety
-Generalized anxiety,anxiety
-Anxiousness,anxiety
-Extreme anxiety,anxiety
-Situational anxiety,anxiety
-Heightened anxiety,anxiety
-Anxiety attacks,anxiety
-Fever or chills,Fever
-Fever,Fever
-Chills,Fever
-F/C,Fever
+body aches,Aches
+aches and pains,Aches
+soreness,Aches
+myodynia,Aches
+achey,Aches
+achy,Aches
+aches,Aches
+achiness,Aches
+arthralgia,Aches
+calf pain,Aches
+neck pain,Aches
+meningismus,Aches
+anxiety,Anxiety
+panic attacks,Anxiety
+panic,Anxiety
+mind racing,Anxiety
+anxiety panic,Anxiety
+anxiety panic attacks,Anxiety
+generalized anxiety,Anxiety
+anxiousness,Anxiety
+extreme anxiety,Anxiety
+situational anxiety,Anxiety
+heightened anxiety,Anxiety
+anxiety attacks,Anxiety
+foggy thinking,Brain fog
+mental fog,Brain fog
+mental fogginess,Brain fog
+foggy brain,Brain fog
+fogginess,Brain fog
+brain fog,Brain fog
+chest pain,Chest pain
+inflammation of heart muscle,Chest pain
+angina,Chest pain
+cp,Chest pain
+chest tightness,Chest pain
+chest heaviness,Chest pain
+cough,Cough
+non-productive cough,Cough
+productive cough,Cough
+cough,Cough
+dry cough,Cough
+coughing,Cough
+nonproductive cough,Cough
+uri symptoms,Cough
+productive cough,Cough
+phlegm production,Cough
+coughing spells,Cough
+coughing fits,Cough
+sputum production,Cough
+hacking cough,Cough
+dry nonproductive cough,Cough
+uri,Cough
+mildly productive cough,Cough
+rattling,Cough
+occasionally productive,Cough
+clear phlegm,Cough
+cold,Cough
+coughing jags,Cough
+nagging cough,Cough
+depression,Depression
+depressed,Depression
+situational depression,Depression
+bipolar disorder,Depression
+bipolar,Depression
+dysthymia,Depression
+diarrhea,Diarrhea
+trots,Diarrhea
+loose stool,Diarrhea
+liquid stools,Diarrhea
+watery stools,Diarrhea
+explosive diarrhea,Diarrhea
+catharsis,Diarrhea
+purgation,Diarrhea
+gi symptoms,Diarrhea
+gastrointestinal symptoms,Diarrhea
+upset stomach,Diarrhea
+abdominal cramping,Diarrhea
+abdominal bloating,Diarrhea
+dizziness,Dizziness
+lightheadedness,Dizziness
+lightheadness ,Dizziness
+dizziness,Dizziness
+dizzines,Dizziness
+light headedness,Dizziness
+feeling dizzy,Dizziness
+wooziness,Dizziness
+feeling lightheaded,Dizziness
+dizzy spells,Dizziness
+dizzy upon standing,Dizziness
+lightheaded,Dizziness
+dizzy,Dizziness
+room spinning,Dizziness
+dizziness,Dizziness
+feels dizzy,Dizziness
+dizzy spell,Dizziness
+vertigo,Dizziness
+dizziness,Dizziness
+feeling light headed,Dizziness
+feels lightheaded,Dizziness
+feeling woozy,Dizziness
+light headed,Dizziness
+woozy feeling,Dizziness
+room spinning sensation,Dizziness
+slightly dizzy,Dizziness
+spinning sensation,Dizziness
+vertiginous symptoms,Dizziness
+hypoxia,Dyspnea
+shortness of breath or difficulty breathing,Dyspnea
+shortness of breath,Dyspnea
+short of breath,Dyspnea
+sob,Dyspnea
+breathlessness,Dyspnea
+respiratory distress,Dyspnea
+respiratory difficulty,Dyspnea
+trouble breathing,Dyspnea
+labored breathing,Dyspnea
+wheezing,Dyspnea
+dyspnea,Dyspnea
+doe,Dyspnea
+dyspnea on exertion,Dyspnea
+pnd,Dyspnea
+paroxysmal nocturnal dyspnea,Dyspnea
+cannot breathe,Dyspnea
+can't breathe,Dyspnea
+difficulty breathing,Dyspnea
+pleurisy,Dyspnea
+pain with inspiration,Dyspnea
+inspiratory pain,Dyspnea
+orthopnea,Dyspnea
+shortness of breath,Dyspnea
+sob,Dyspnea
+doe,Dyspnea
+dyspnea ,Dyspnea
+dyspnea on exertion,Dyspnea
+difficulty breathing,Dyspnea
+breathlessness,Dyspnea
+fatigue,Fatigue
+tired,Fatigue
+exhausted,Fatigue
+exhaustion,Fatigue
+lethargy,Fatigue
+prostration,Fatigue
+malaise,Fatigue
+tiredness,Fatigue
+weakness,Fatigue
+debilitation,Fatigue
+weariness,Fatigue
+asthenia,Fatigue
+worn out,Fatigue
+low energy,Fatigue
+sleepy,Fatigue
+out of it,Fatigue
+fatigue,Fatigue
+extreme fatigue,Fatigue
+generalized fatigue,Fatigue
+tiredness,Fatigue
+profound fatigue,Fatigue
+feeling fatigued,Fatigue
+exhaustion,Fatigue
+malaise ,Fatigue
+feeling weak,Fatigue
+weakness,Fatigue
+loss of energy,Fatigue
+no energy,Fatigue
+post-exertional malaise,Fatigue
+poor exercise tolerance,Fatigue
+feeling faint,Fatigue
+fever or chills,Fever
+fever,Fever
+chills,Fever
+f/c,Fever
 fever/chills,Fever
-Rigors,Fever
-Shivering,Fever
-Febrile,Fever
-High Temperature,Fever
-High Temp,Fever
-Elevated temperature,Fever
-Elevated temp,Fever
-Hyperthermia,Fever
-Hyperpyrexia,Fever
-Night Sweats,Fever
-Diaphoresis,Fever
-Diaphoretic,Fever
-Sweaty,Fever
-Shakes,Fever
-Shakiness,Fever
-Shakey,Fever
-Tremor,Fever
-Cough,Cough
-Non-productive cough,Cough
-Productive cough,Cough
-Hypoxia,Dyspnea
-Shortness of breath or difficulty breathing,Dyspnea
-Shortness of breath,Dyspnea
-Short of breath,Dyspnea
-SOB,Dyspnea
-Breathlessness,Dyspnea
-Respiratory distress,Dyspnea
-Respiratory difficulty,Dyspnea
-Trouble breathing,Dyspnea
-Labored breathing,Dyspnea
-Wheezing,Dyspnea
-Dyspnea,Dyspnea
-DOE,Dyspnea
-Dyspnea on Exertion,Dyspnea
-PND,Dyspnea
-Paroxysmal nocturnal dyspnea,Dyspnea
-Cannot Breathe,Dyspnea
-Can't breathe,Dyspnea
-Difficulty Breathing,Dyspnea
-Pleurisy,Dyspnea
-Pain with inspiration,Dyspnea
-Inspiratory pain,Dyspnea
-Orthopnea,Dyspnea
-Fatigue,Fatigue
-Tired,Fatigue
-Exhausted,Fatigue
-Exhaustion,Fatigue
-Lethargy,Fatigue
-Prostration,Fatigue
-Malaise,Fatigue
-Tiredness,Fatigue
-Weakness,Fatigue
-Debilitation,Fatigue
-Weariness,Fatigue
-Asthenia,Fatigue
-Worn out,Fatigue
-Low Energy,Fatigue
-Sleepy,Fatigue
-Out of it,Fatigue
-Muscle or body aches,Aches
-Muscle Aches,Aches
-Muscle pains,Aches
-Body Aches,Aches
-Aches and Pains,Aches
-Soreness,Aches
-Myalgias,Aches
-Myodynia,Aches
-Muscle cramps,Aches
-Achey,Aches
-Achy,Aches
-Aches,Aches
-Achiness,Aches
-Arthralgia,Aches
-Calf pain,Aches
-Neck Pain,Aches
-Meningismus,Aches
-Headache,Headaches
-Migraine,Headaches
-Cephalic pain,Headaches
-Cephalalgia,Headaches
-Confusion,Headaches
-Disorientation,Headaches
-Delirium,Headaches
-Discombobulation,Headaches
-Out of it,Headaches
-Sleepy,Headaches
-New loss of taste or smell,Taste smell loss
-Loss of Taste,Taste smell loss
-Metallic taste,Taste smell loss
-Hypogeusia,Taste smell loss
-Dysgeusia,Taste smell loss
-Distaste,Taste smell loss
-Can't taste,Taste smell loss
-Cannot taste,Taste smell loss
-Loss of Smell,Taste smell loss
-Can't smell,Taste smell loss
-Cannot smell,Taste smell loss
-Ageusia,Taste smell loss
-Anosmia,Taste smell loss
-Lack of olfactory sense,Taste smell loss
-Dysosmia,Taste smell loss
-Sore Throat,Sore Throat
-Scratchy throat,Sore Throat
-Throat pain,Sore Throat
-Throat irritation,Sore Throat
-Pharyngitis,Sore Throat
-Laryngitis,Sore Throat
-Painful swallowing,Sore Throat
-Odynophagia,Sore Throat
-Difficulty swallowing,Sore Throat
-Hoarse voice,Sore Throat
-Dysphagia,Sore Throat
-Congestion or runny nose,Rhinitis Congestion
-Nasal Congestion,Rhinitis Congestion
-Sinus congestion,Rhinitis Congestion
-Congested,Rhinitis Congestion
-Congestion,Rhinitis Congestion
-Stuffy nose,Rhinitis Congestion
-Runny Nose,Rhinitis Congestion
-Rhinorrhea,Rhinitis Congestion
-Sniffles,Rhinitis Congestion
-Mucusy,Rhinitis Congestion
-Nasal discharge,Rhinitis Congestion
-Rhinitis,Rhinitis Congestion
-Nausea or vomiting,Nausea vomiting
-Nausea,Nausea vomiting
-Queasiness,Nausea vomiting
-Food aversion,Nausea vomiting
-Vomiting,Nausea vomiting
-Stomach sickness,Nausea vomiting
-Retching,Nausea vomiting
-Throwing up,Nausea vomiting
-Gagging,Nausea vomiting
-N/V,Nausea vomiting
+rigors,Fever
+shivering,Fever
+febrile,Fever
+high temperature,Fever
+high temp,Fever
+elevated temperature,Fever
+elevated temp,Fever
+hyperthermia,Fever
+hyperpyrexia,Fever
+night sweats,Fever
+diaphoresis,Fever
+diaphoretic,Fever
+sweaty,Fever
+shakes,Fever
+shakiness,Fever
+shakey,Fever
+tremor,Fever
+fever,Fever
+intermittent fever,Fever
+f/c ,Fever
+fever/chills,Fever
+febrile,Fever
+high temperature,Fever
+high temp,Fever
+elevated temperature,Fever
+elevated temp,Fever
+hyperthermia,Fever
+hyperpyrexia,Fever
+hair loss,Hair loss
+hair thinning,Hair loss
+losing hair,Hair loss
+thinning hair,Hair loss
+hair falling out,Hair loss
+diffuse hair loss,Hair loss
+hairloss,Hair loss
+increased hair shedding,Hair loss
+alopecia,Hair loss
+headache,Headaches
+migraine,Headaches
+cephalic pain,Headaches
+cephalalgia,Headaches
+headache,Headaches
+frontal headache,Headaches
+throbbing headache,Headaches
+dull headache,Headaches
+occipital headache,Headaches
+headaches,Headaches
+pounding headache,Headaches
+bitemporal headache,Headaches
+bifrontal headache,Headaches
+photophobia,Headaches
+blurry vision,Headaches
+ha ,Headaches
+light sensitivity,Headaches
+frontal throbbing,Headaches
+typical migraine,Headaches
+mild frontal headache,Headaches
+photophobia,Headaches
+phonophobia,Headaches
+neck stiffness,Headaches
+blurred vision,Headaches
+terrible headache,Headaches
+visual disturbances,Headaches
+visual changes,Headaches
+head ache,Headaches
+photophobic,Headaches
+frontal ha,Headaches
+sleep symptoms,Insomnia
+frequent awakenings,Insomnia
+interrupted sleep,Insomnia
+poor sleep,Insomnia
+having trouble falling asleep,Insomnia
+wakes up frequently,Insomnia
+cannot fall asleep,Insomnia
+wakes frequently,Insomnia
+trouble falling asleep,Insomnia
+insomnia,Insomnia
+sleep disturbance,Insomnia
+difficulties falling asleep,Insomnia
+difficulty falling asleep,Insomnia
+trouble falling asleep,Insomnia
+difficulty staying asleep,Insomnia
+wake up at night,Insomnia
+no restful sleep,Insomnia
+trouble sleeping,Insomnia
+napping during the day,Insomnia
+naps during day,Insomnia
+sleeps during day,Insomnia
+feeling unrested,Insomnia
+delayed sleep onset,Insomnia
+not waking up refreshed ,Insomnia
+excessive daytime sleepiness,Insomnia
+eds,Insomnia
+daytime somnolence,Insomnia
+joint pain,Joint pain
+joint stiffness,Joint pain
+jp,Joint pain
+arthralgia,Joint pain
+arthritis,Joint pain
+difficulties with executive function ,Memory loss
+problem-solving difficulties,Memory loss
+cognitive dysfunction,Memory loss
+memory impairment,Memory loss
+cognitive decline,Memory loss
+cognitive impairment,Memory loss
+mild cognitive impairment,Memory loss
+cognitive deficit,Memory loss
+memory difficulties,Memory loss
+cognitive deficits,Memory loss
+memory loss,Memory loss
+memory problems,Memory loss
+short term memory issues,Memory loss
+word finding difficulties,Memory loss
+word finding difficulty,Memory loss
+difficulty finding words,Memory loss
+occasional word finding difficulty,Memory loss
+short term memory deficits,Memory loss
+trouble finding words,Memory loss
+long term memory loss,Memory loss
+muscle aches,Muscle pain
+muscle cramps,Muscle pain
+myalgias,Muscle pain
+nausea or vomiting,Nausea vomiting
+nausea,Nausea vomiting
+queasiness,Nausea vomiting
+food aversion,Nausea vomiting
+vomiting,Nausea vomiting
+stomach sickness,Nausea vomiting
+retching,Nausea vomiting
+throwing up,Nausea vomiting
+gagging,Nausea vomiting
+n/v,Nausea vomiting
 nausea/vomiting,Nausea vomiting
-GI symptoms,Nausea vomiting
-Gastrointestinal symptoms,Nausea vomiting
-Upset stomach,Nausea vomiting
-Purgation,Nausea vomiting
-Abdominal cramping,Nausea vomiting
-Abdominal cramps,Nausea vomiting
-Cramps,Nausea vomiting
-Abdominal bloating,Nausea vomiting
-Abdominal pain,Nausea vomiting
-Emesis,Nausea vomiting
-Queasy,Nausea vomiting
-Dry heaves,Nausea vomiting
-Anorexia,Nausea vomiting
-Not hungry,Nausea vomiting
-Poor Appetite,Nausea vomiting
-Not Eating,Nausea vomiting
-Heartburn,Nausea vomiting
-Dyspepsia,Nausea vomiting
-Diarrhea,Diarrhea
-Trots,Diarrhea
-Loose stool,Diarrhea
-Liquid stools,Diarrhea
-Watery stools,Diarrhea
-Explosive diarrhea,Diarrhea
-Catharsis,Diarrhea
-Purgation,Diarrhea
-GI symptoms,Diarrhea
-Gastrointestinal symptoms,Diarrhea
-Upset stomach,Diarrhea
-Abdominal cramping,Diarrhea
-Abdominal bloating,Diarrhea
+gi symptoms,Nausea vomiting
+gastrointestinal symptoms,Nausea vomiting
+upset stomach,Nausea vomiting
+purgation,Nausea vomiting
+abdominal cramping,Nausea vomiting
+abdominal cramps,Nausea vomiting
+cramps,Nausea vomiting
+abdominal bloating,Nausea vomiting
+abdominal pain,Nausea vomiting
+emesis,Nausea vomiting
+queasy,Nausea vomiting
+dry heaves,Nausea vomiting
+anorexia,Nausea vomiting
+not hungry,Nausea vomiting
+poor appetite,Nausea vomiting
+not eating,Nausea vomiting
+heartburn,Nausea vomiting
+dyspepsia,Nausea vomiting
+palpitation,Palpitation
+palpitations,Palpitation
+palpations,Palpitation
+occasional palpitations,Palpitation
+palpitations,Palpitation
+palpitations,Palpitation
+irregular heartbeats,Palpitation
+racing heart,Palpitation
+palpitations,Palpitation
+racing heart beat,Palpitation
+presyncope,Palpitation
+tachycardia,Palpitation
+sinus tachycardia,Palpitation
+persistent tachycardia,Palpitation
+tachycardiac ,Palpitation
+persistently tachycardic,Palpitation
+tachycardic,Palpitation
+svt,Palpitation
+tachycardia,Palpitation
+tachcardia,Palpitation
+heart palpitations,Palpitation
+congestion or runny nose,Rhinitis congestion
+nasal congestion,Rhinitis congestion
+sinus congestion,Rhinitis congestion
+congested,Rhinitis congestion
+congestion,Rhinitis congestion
+stuffy nose,Rhinitis congestion
+runny nose,Rhinitis congestion
+rhinorrhea,Rhinitis congestion
+sniffles,Rhinitis congestion
+mucusy,Rhinitis congestion
+nasal discharge,Rhinitis congestion
+rhinitis,Rhinitis congestion
+congestion,Rhinitis congestion
+sinus congestion,Rhinitis congestion
+rash,Skin rash
+prutitic,Skin rash
+itchy rash,Skin rash
+itching,Skin rash
+pruritic rash,Skin rash
+itchy,Skin rash
+very pruritic,Skin rash
+rash itches,Skin rash
+mildly itchy,Skin rash
+very itchy,Skin rash
+red bumps,Skin rash
+spreading rash,Skin rash
+mildly pruritic,Skin rash
+small red dots,Skin rash
+slightly pruritic,Skin rash
+bumpy rash,Skin rash
+itch,Skin rash
+an itchy rash,Skin rash
+raised bumps,Skin rash
+hive-like,Skin rash
+red bumpy rash,Skin rash
+bug bites,Skin rash
+red dots,Skin rash
+red blotchy rash,Skin rash
+nonpruritic rash,Skin rash
+red raised bumps,Skin rash
+hive-like rash,Skin rash
+small red spots,Skin rash
+hives,Skin rash
+red itchy rash,Skin rash
+red raised rash,Skin rash
+red spots,Skin rash
+red bumpy rash,Skin rash
+itches,Skin rash
+red itchy bumps,Skin rash
+welts,Skin rash
+itchiness,Skin rash
+blotches,Skin rash
+rash anywhere else,Skin rash
+raised red bumps,Skin rash
+bumpy,Skin rash
+papular rash,Skin rash
+intensely itchy,Skin rash
+red itchy rash,Skin rash
+pimple like rash,Skin rash
+pruritus,Skin rash
+macular rash ,Skin rash
+sore throat,Sore throat
+scratchy throat,Sore throat
+throat pain,Sore throat
+throat irritation,Sore throat
+pharyngitis,Sore throat
+laryngitis,Sore throat
+painful swallowing,Sore throat
+odynophagia,Sore throat
+difficulty swallowing,Sore throat
+hoarse voice,Sore throat
+dysphagia,Sore throat
+new loss of taste or smell,Taste smell loss
+loss of taste,Taste smell loss
+metallic taste,Taste smell loss
+hypogeusia,Taste smell loss
+dysgeusia,Taste smell loss
+distaste,Taste smell loss
+can't taste,Taste smell loss
+cannot taste,Taste smell loss
+loss of smell,Taste smell loss
+can't smell,Taste smell loss
+cannot smell,Taste smell loss
+ageusia,Taste smell loss
+anosmia,Taste smell loss
+lack of olfactory sense,Taste smell loss
+dysosmia,Taste smell loss
+loss of taste,Taste smell loss
+metallic taste,Taste smell loss
+hypogeusia ,Taste smell loss
+dysgeusia,Taste smell loss
+distaste  ,Taste smell loss
+can't taste,Taste smell loss
+cannot taste,Taste smell loss
+loss of smell,Taste smell loss
+can't smell,Taste smell loss
+cannot smell,Taste smell loss
+ageusia,Taste smell loss
+anosmia,Taste smell loss
+lack of olfactory sense,Taste smell loss
+dysosmia,Taste smell loss
+confusion,Thinking difficulty
+disorientation,Thinking difficulty
+delirium,Thinking difficulty
+discombobulation,Thinking difficulty
+out of it,Thinking difficulty
+poor attention,Thinking difficulty
+poor concentration,Thinking difficulty
+impaired concentration,Thinking difficulty
+trouble concentrating,Thinking difficulty
+difficulties with thinking and concentration,Thinking difficulty
+thinking difficulty,Thinking difficulty
+distractibility ,Thinking difficulty
+distracted ,Thinking difficulty
